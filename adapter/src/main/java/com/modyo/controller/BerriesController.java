@@ -1,28 +1,30 @@
 package com.modyo.controller;
 
-import com.modyo.mapper.FirmnessMapper;
-import com.modyo.response.berry.BerryResponse;
-import com.modyo.response.berry.FirmnessResponse;
-import com.modyo.mapper.BerryMapper;
-import com.modyo.service.BerriesService;
+import com.modyo.response.berry.berries.BerryResponse;
+import com.modyo.response.berry.firmness.BerryFirmnessResponse;
+import com.modyo.response.berry.flavor.BerryFlavorsResponse;
+import com.modyo.service.berry.BerryService;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BerriesController {
 
-    private final BerriesService berriesService;
-    private final BerryMapper berryMapper;
-    private final FirmnessMapper firmnessMapper;
+    private final BerryService berryService;
 
-    public BerriesController(BerriesService berriesService, BerryMapper berryMapper, FirmnessMapper firmnessMapper) {
-        this.berriesService = berriesService;
-        this.berryMapper = berryMapper;
-        this.firmnessMapper = firmnessMapper;
+    public BerriesController(BerryService berryService) {
+        this.berryService = berryService;
     }
 
     public BerryResponse berries(String id) {
-        return berryMapper.apply(berriesService.findBerryByIdOrName(id));
+        return berryService.obtainBerries(id);
     }
 
-    public FirmnessResponse firmness(String id) { return  firmnessMapper.apply();}
+    public BerryFirmnessResponse firmness(String id) {
+        return berryService.getFirmnessInformation(id);
+    }
+
+    public BerryFlavorsResponse flavors(String id) {
+        return berryService.getFlavorsInformation(id);
+    }
+
 }

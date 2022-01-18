@@ -25,7 +25,8 @@
 		<module>repository</module>
 		<module>main</module>
 		<module>web</module>
-	</modules>
+        <module>external</module>
+    </modules>
 
 	<dependencies>
 		<dependency>

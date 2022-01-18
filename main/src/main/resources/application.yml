@@ -6,3 +6,11 @@ server:
 spring:
   jackson:
     property-naming-strategy: SNAKE_CASE
+
+service:
+  poke-api:
+    url: https://pokeapi.co/api/v2/
+    berry-service:
+      berries: berry/
+      berry-firmness: berry-firmness/
+      berry-flavor: berry-flavor/
