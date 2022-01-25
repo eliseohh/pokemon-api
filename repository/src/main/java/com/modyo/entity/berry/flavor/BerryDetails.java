@@ -6,6 +6,6 @@ import lombok.Getter;
 @Getter
 @Builder
 public class BerryDetails {
-    private String name;
-    private String url;
+    private final String name;
+    private final String url;
 }

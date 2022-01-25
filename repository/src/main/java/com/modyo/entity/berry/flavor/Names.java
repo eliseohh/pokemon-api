@@ -6,6 +6,6 @@ import lombok.Getter;
 @Getter
 @Builder
 public class Names {
-    private String name;
-    private Language language;
+    private final String name;
+    private final Language language;
 }

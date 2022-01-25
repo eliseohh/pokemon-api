@@ -1,18 +1,17 @@
 package com.modyo.repository;
 
 import com.modyo.entity.berry.berries.Berry;
-import com.modyo.entity.berry.berries.Flavor;
 import com.modyo.entity.berry.firmness.BerryFirmness;
 import com.modyo.entity.berry.flavor.BerryFlavors;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.client.HttpServerErrorException.InternalServerError;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 
-@Component
+@Repository
 public class BerryRepositoryService implements BerryRepository {
 
     @Value("${service.poke-api.url}")
