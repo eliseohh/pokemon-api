@@ -1,11 +1,11 @@
-package com.modyo.service.berry.impl;
+package com.modyo.service.impl;
 
 import com.modyo.entity.berry.berries.Berry;
 import com.modyo.entity.berry.firmness.BerryFirmness;
 import com.modyo.entity.berry.flavor.BerryFlavors;
 import com.modyo.repository.BerryRepository;
-import org.springframework.stereotype.Service;
 import com.modyo.service.BerriesService;
+import org.springframework.stereotype.Service;
 
 @Service
 public class BerriesServiceImpl implements BerriesService {

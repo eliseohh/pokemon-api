@@ -23,7 +23,7 @@ public class BerryMapper implements Function<Berry, BerryResponse> {
                 .smoothness(berry.getSmoothness())
                 .soilDryness(berry.getSoilDryness())
                 .firmness(FirmnessResponse.builder()
-                        .name(berry.getFirmness().getUrl())
+                        .name(berry.getFirmness().getName())
                         .url(berry.getFirmness().getUrl())
                         .build())
                 .flavors(berry.getFlavors().stream().map(el -> FlavorResponse.builder()

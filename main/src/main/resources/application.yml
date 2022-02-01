@@ -14,3 +14,7 @@ service:
       berries: berry/
       berry-firmness: berry-firmness/
       berry-flavor: berry-flavor/
+    pokemon-service:
+      pokemon: pokemon/
+    evolution-service:
+      chain: evolution-chain/

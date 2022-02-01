@@ -1,12 +1,14 @@
 package com.modyo.entity.pokemon.pokemon;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
 
-@Getter
 @Setter
+@Getter
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Pokemon {
     private Long id;
     private String name;

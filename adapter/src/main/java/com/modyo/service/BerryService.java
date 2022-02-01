@@ -1,4 +1,4 @@
-package com.modyo.service.berry;
+package com.modyo.service;
 
 import com.modyo.response.berry.berries.BerryResponse;
 import com.modyo.response.berry.firmness.BerryFirmnessResponse;

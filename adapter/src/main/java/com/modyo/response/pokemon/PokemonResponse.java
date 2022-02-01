@@ -10,6 +10,7 @@ import java.util.List;
 public class PokemonResponse {
     private final String type;
     private final Integer weight;
+    private final String name;
     private final List<AbilityPokemonResponse> abilities;
     private final String description;
     private final List<EvolutionPokemonResponse> evolutions;

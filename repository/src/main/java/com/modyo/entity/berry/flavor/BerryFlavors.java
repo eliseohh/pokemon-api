@@ -2,11 +2,12 @@ package com.modyo.entity.berry.flavor;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 
 @Getter
-@Builder
+@Setter
 public class BerryFlavors {
     private int id;
     private String name;

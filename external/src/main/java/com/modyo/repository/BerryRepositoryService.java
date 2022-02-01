@@ -3,6 +3,7 @@ package com.modyo.repository;
 import com.modyo.entity.berry.berries.Berry;
 import com.modyo.entity.berry.firmness.BerryFirmness;
 import com.modyo.entity.berry.flavor.BerryFlavors;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
@@ -13,19 +14,10 @@ import java.net.URI;
 
 @Repository
 public class BerryRepositoryService implements BerryRepository {
-
-    @Value("${service.poke-api.url}")
     private String pokeApi;
-
-    @Value("${service.poke-api.berry-service.berries}")
     private String berries;
-
-    @Value("${service.poke-api.berry-service.berry-firmness}")
     private String firmness;
-
-    @Value("${service.poke-api.berry-service.berry-flavor}")
     private String flavor;
-
     private final RestTemplate restTemplate;
 
     public BerryRepositoryService(RestTemplate restTemplate) {
@@ -51,5 +43,25 @@ public class BerryRepositoryService implements BerryRepository {
         URI uri = URI.create(String.format("%s%s%s", pokeApi, flavor, id));
         ResponseEntity<BerryFlavors> entityResponse = restTemplate.getForEntity(uri, BerryFlavors.class);
         return entityResponse.getBody();
+    }
+
+    @Autowired
+    public void setPokeApi(@Value("${service.poke-api.url}") String pokeApi) {
+        this.pokeApi = pokeApi;
+    }
+
+    @Autowired
+    public void setBerries(@Value("${service.poke-api.berry-service.berries}") String berries) {
+        this.berries = berries;
+    }
+
+    @Autowired
+    public void setFirmness(@Value("${service.poke-api.berry-service.berry-firmness}") String firmness) {
+        this.firmness = firmness;
+    }
+
+    @Autowired
+    public void setFlavor(@Value("${service.poke-api.berry-service.berry-flavor}") String flavor) {
+        this.flavor = flavor;
     }
 }

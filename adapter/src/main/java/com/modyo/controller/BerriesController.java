@@ -3,7 +3,7 @@ package com.modyo.controller;
 import com.modyo.response.berry.berries.BerryResponse;
 import com.modyo.response.berry.firmness.BerryFirmnessResponse;
 import com.modyo.response.berry.flavor.BerryFlavorsResponse;
-import com.modyo.service.berry.BerryService;
+import com.modyo.service.BerryService;
 import org.springframework.stereotype.Component;
 
 @Component

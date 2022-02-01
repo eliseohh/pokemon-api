@@ -3,14 +3,12 @@ package com.modyo.mapper.berry;
 import com.modyo.entity.berry.firmness.BerryFirmness;
 import com.modyo.response.berry.firmness.Berry;
 import com.modyo.response.berry.firmness.BerryFirmnessResponse;
-import com.modyo.response.berry.berries.BerryResponse;
 import com.modyo.response.berry.firmness.LanguageResponse;
 import com.modyo.response.berry.firmness.NameResponse;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.function.Function;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Component

@@ -1,23 +1,23 @@
 package com.modyo.entity.berry.berries;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.ArrayList;
 
 @Getter
+@Setter
 @Builder
 public class Berry {
-    private final int id;
-    private final String name;
-    private final int growthTime;
-    private final int maxHarvest;
-    private final int naturalGiftPower;
-    private final int size;
-    private final int smoothness;
-    private final int soilDryness;
-    private final Firmness firmness;
-    private final ArrayList<Flavor> flavors;
-    private final Item item;
-    private final NaturalGiftType naturalGiftType;
+    private int id;
+    private String name;
+    private int growthTime;
+    private int maxHarvest;
+    private int naturalGiftPower;
+    private int size;
+    private int smoothness;
+    private int soilDryness;
+    private Firmness firmness;
+    private ArrayList<Flavor> flavors;
+    private Item item;
+    private NaturalGiftType naturalGiftType;
 }
