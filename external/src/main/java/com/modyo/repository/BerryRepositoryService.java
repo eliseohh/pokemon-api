@@ -1,7 +1,6 @@
 package com.modyo.repository;
 
 import com.modyo.entity.berry.berries.Berry;
-import com.modyo.entity.berry.berries.Flavor;
 import com.modyo.entity.berry.firmness.BerryFirmness;
 import com.modyo.entity.berry.flavor.BerryFlavors;
 import org.springframework.beans.factory.annotation.Value;
