@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp main/target/classes:main/target/dependency/* com.modyo.PokemonApplication -Dserver.port=$PORT
+web: java $JAVA_OPTS -cp main/target/classes:main/target/dependency/* com.modyo.PokemonApplication
